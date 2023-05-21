@@ -14,7 +14,7 @@ const ProjectSchema = new mongoose_1.default.Schema({
     },
     status: {
         type: String,
-        enum: ["Not Started", "In progress", "Completed"],
+        enum: ["Not Started", "In Progress", "Completed"],
     },
     clientId: {
         // id that refers to the model with name of "Client"

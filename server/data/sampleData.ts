@@ -5,7 +5,7 @@ export interface Project {
   clientId: string;
   name: string;
   description: string;
-  status: string;
+  status: "Not Started" | "In Progress" | "Completed";
 }
 
 export interface Client {
@@ -46,7 +46,7 @@ const projects: Project[] = [
     name: "Design Prototype",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.",
-    status: "Done",
+    status: "Completed",
   },
   {
     id: "5",

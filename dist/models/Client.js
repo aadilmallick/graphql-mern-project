@@ -11,6 +11,7 @@ const ClientSchema = new mongoose_1.default.Schema({
     },
     email: {
         type: String,
+        unique: [true, "must be unique"],
     },
     phone: {
         type: String,
