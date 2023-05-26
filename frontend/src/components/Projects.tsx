@@ -13,7 +13,7 @@ export const Projects = () => {
   const openModal = setIsOpen.bind(null, true);
   const closeModal = setIsOpen.bind(null, false);
 
-  if (loading) return <h1 className="text-3xl">Loading projects</h1>;
+  if (loading) return <h1 className="text-3xl mt-64">Loading projects</h1>;
   if (error) {
     console.log(error);
     return <h1>error</h1>;

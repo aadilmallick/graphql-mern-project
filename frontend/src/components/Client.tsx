@@ -1,4 +1,4 @@
-import { useQuery, gql, useMutation } from "@apollo/client";
+import { useQuery, useMutation } from "@apollo/client";
 import { FaTrash } from "react-icons/fa";
 import { DELETE_CLIENT } from "../mutations/clientMutations";
 import React from "react";
@@ -14,7 +14,7 @@ export const Client = () => {
     GET_CLIENTS
   );
   const [isOpen, setIsOpen] = React.useState(false);
-  if (loading) return <h1>Loading...</h1>;
+  if (loading) return <h1 className="text-3xl mt-64">Loading...</h1>;
   if (error) return <h1>SOmething went wrong</h1>;
 
   const openModal = () => setIsOpen(true);

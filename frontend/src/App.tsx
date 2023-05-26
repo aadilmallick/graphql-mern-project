@@ -5,8 +5,15 @@ import { Projects } from "./components/Projects";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SingleProject } from "./components/SingleProject";
 
+/* ? How to deploy
+  ? Build command installs dependencies, and builds the static files. 
+  ? Start command starts the server
+*/
+
+// TODO: explain this
+// TODO: do not hard code the url
 const client = new ApolloClient({
-  uri: "http://localhost:5000/graphql",
+  uri: "/graphql",
   cache: new InMemoryCache(),
 });
 function App() {

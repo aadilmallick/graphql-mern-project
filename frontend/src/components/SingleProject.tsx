@@ -1,6 +1,5 @@
 import { useMutation, useQuery } from "@apollo/client";
-import React from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Project, GET_PROJECT, GET_PROJECTS } from "../queries/projectQueries";
 import { FaTrash } from "react-icons/fa";
 import { DELETE_PROJECT } from "../mutations/projectMutations";

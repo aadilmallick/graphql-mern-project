@@ -9,7 +9,11 @@ const dotenv_1 = __importDefault(require("dotenv"));
 const schema_1 = require("./schema/schema");
 const config_1 = require("./config");
 const cors_1 = __importDefault(require("cors"));
-dotenv_1.default.config();
+const path = require("path");
+dotenv_1.default.config({
+    path: `.env${process.env.NODE_ENV === "production" ? ".production" : ""}`,
+});
+console.log("NODE_ENV:", process.env.NODE_ENV);
 const PORT = (process.env.PORT || 3000);
 const app = (0, express_1.default)();
 // allow cross origin requests from anywhere
