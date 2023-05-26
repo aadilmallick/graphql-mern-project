@@ -8,9 +8,12 @@ const express_graphql_1 = require("express-graphql");
 const dotenv_1 = __importDefault(require("dotenv"));
 const schema_1 = require("./schema/schema");
 const config_1 = require("./config");
+const cors_1 = __importDefault(require("cors"));
 dotenv_1.default.config();
 const PORT = (process.env.PORT || 3000);
 const app = (0, express_1.default)();
+// allow cross origin requests from anywhere
+app.use((0, cors_1.default)());
 app.use("/graphql", (0, express_graphql_1.graphqlHTTP)({
     graphiql: true,
     schema: schema_1.Schema,

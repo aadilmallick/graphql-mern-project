@@ -4,11 +4,13 @@ import dotenv from "dotenv";
 import { Schema } from "./schema/schema";
 import { connectDB } from "./config";
 import colors from "colors";
+import cors from "cors";
 dotenv.config();
 const PORT = (process.env.PORT || 3000) as number;
 
 const app = express();
-
+// allow cross origin requests from anywhere
+app.use(cors());
 app.use(
   "/graphql",
   graphqlHTTP({

@@ -1,6 +1,7 @@
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Logo = () => {
   return (
     <div className="w-12 h-full">
@@ -14,7 +15,10 @@ const Logo = () => {
 };
 
 const NavLinks = ({ isVisible }: { isVisible: boolean }) => {
-  const linkList = ["home", "something", "something", "something"];
+  const linkList = [
+    { text: "clients", path: "/" },
+    { text: "projects", path: "/projects" },
+  ];
 
   return (
     <ul
@@ -23,14 +27,14 @@ const NavLinks = ({ isVisible }: { isVisible: boolean }) => {
       }`}
     >
       {linkList.map((link) => (
-        <li className="">
-          <a
-            href=""
+        <li className="" key={link.path}>
+          <Link
+            to={link.path}
             className="block px-4 py-2 tracking-widest  transition-all capitalize bg-white border-t md:border-none hover:bg-pink-400 hover:pl-8 hover:text-white
             md:hover:text-pink-400 md:hover:bg-transparent md:hover:pl-4"
           >
-            {link}
-          </a>
+            {link.text}
+          </Link>
         </li>
       ))}
     </ul>

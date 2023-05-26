@@ -121,6 +121,9 @@ const RootMutation = new GraphQLObjectType({
         id: { type: GraphQLNonNull(GraphQLString) },
       },
       resolve: async (parent, args) => {
+        const clients_projects = await ProjectModel.deleteMany({
+          clientId: args.id,
+        });
         const client = await ClientModel.findByIdAndRemove(args.id);
         return client;
       },
