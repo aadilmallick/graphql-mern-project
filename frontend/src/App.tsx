@@ -9,7 +9,7 @@ import { SingleProject } from "./components/SingleProject";
   ? Build command installs dependencies, and builds the static files. 
   ? Start command starts the server
 */
-
+// ? what I must do is whitelist the mongo ip from anywhere
 // TODO: explain this
 // TODO: do not hard code the url
 const client = new ApolloClient({

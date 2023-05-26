@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
       "/graphql": {
         target:
           mode === "production"
-            ? "https://notes-aadil-mallick.onrender.com"
+            ? "https://graphql-mern-clients-and-projects.onrender.com"
             : "http://localhost:5000",
         changeOrigin: true,
         secure: false,
